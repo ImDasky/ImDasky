@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stack — languages, iOS, security, web, tools">
+  <style>
+    .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .rise { opacity: 0; animation: rise .6s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise { from { opacity:0;transform:translateY(6px); } to { opacity:1;transform:translateY(0); } }
+    .a1{animation-delay:.1s} .a2{animation-delay:.2s} .a3{animation-delay:.3s} .a4{animation-delay:.4s} .a5{animation-delay:.5s} .a6{animation-delay:.6s} .a7{animation-delay:.7s}
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; } }
+  </style>
+
+  <!-- Row 1: Languages -->
+  <text x="30" y="24" class="mono rise a1" fill="#888888" font-size="10" letter-spacing="2">LANGUAGES</text>
+  <text x="30" y="44" class="mono rise a1" fill="#333333" font-size="12" letter-spacing="1">Python · Objective-C · Swift · C/C++ · ARM Assembly · JavaScript · TypeScript · Logos</text>
+
+  <!-- Row 2: iOS & Security -->
+  <text x="30" y="80" class="mono rise a2" fill="#888888" font-size="10" letter-spacing="2">iOS &amp; SECURITY</text>
+  <text x="30" y="100" class="mono rise a2" fill="#333333" font-size="12" letter-spacing="1">Hopper Disassembler · Frida · class-dump · LLDB · Cycript · MobileSubstrate · Theos</text>
+
+  <!-- Row 3: Network -->
+  <text x="30" y="136" class="mono rise a3" fill="#888888" font-size="10" letter-spacing="2">NETWORK</text>
+  <text x="30" y="156" class="mono rise a3" fill="#333333" font-size="12" letter-spacing="1">Surge · Burp Suite · Wireshark · Custom Python Automation · REST · GraphQL</text>
+
+  <!-- Row 4: Web & Mobile -->
+  <text x="30" y="192" class="mono rise a4" fill="#888888" font-size="10" letter-spacing="2">WEB &amp; MOBILE</text>
+  <text x="30" y="212" class="mono rise a4" fill="#333333" font-size="12" letter-spacing="1">SwiftUI · UIKit · Core Data · Next.js · React · Node.js · Vite</text>
+
+  <!-- Vertical separator -->
+  <line x1="700" y1="14" x2="700" y2="220" stroke="#C0C0C0" stroke-width="0.5" class="rise a5"/>
+
+  <!-- Right column: Platforms & OS -->
+  <text x="730" y="24" class="mono rise a5" fill="#888888" font-size="10" letter-spacing="2">PLATFORMS</text>
+  <text x="730" y="44" class="mono rise a5" fill="#333333" font-size="12" letter-spacing="1">iOS · macOS · Linux</text>
+
+  <text x="730" y="80" class="mono rise a6" fill="#888888" font-size="10" letter-spacing="2">INFRASTRUCTURE</text>
+  <text x="730" y="100" class="mono rise a6" fill="#333333" font-size="12" letter-spacing="1">Git · GitHub Actions</text>
+  <text x="730" y="118" class="mono rise a6" fill="#333333" font-size="12" letter-spacing="1">Docker · Netlify</text>
+
+  <text x="730" y="156" class="mono rise a7" fill="#888888" font-size="10" letter-spacing="2">METHODOLOGY</text>
+  <text x="730" y="176" class="mono rise a7" fill="#333333" font-size="12" letter-spacing="1">Responsible Disclosure</text>
+  <text x="730" y="194" class="mono rise a7" fill="#333333" font-size="12" letter-spacing="1">Runtime Instrumentation</text>
+  <text x="730" y="212" class="mono rise a7" fill="#333333" font-size="12" letter-spacing="1">Binary Analysis</text>
+</svg>
