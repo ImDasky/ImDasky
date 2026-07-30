@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1000 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="8 projects">
+  <style>
+    .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise { from { opacity:0;transform:translateY(8px); } to { opacity:1;transform:translateY(0); } }
+    .a1{animation-delay:.05s} .a2{animation-delay:.1s} .a3{animation-delay:.15s} .a4{animation-delay:.2s} .a5{animation-delay:.25s} .a6{animation-delay:.3s} .a7{animation-delay:.35s} .a8{animation-delay:.4s}
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; } }
+  </style>
+
+  <!-- Project 01 -->
+  <g class="rise a1">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">01 / FLEX-JAILED</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">FLEX with dylib injection support for non-jailbroken iOS devices.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Runtime inspection and debugging without a jailbreak environment.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">OBJECTIVE-C · DYLIB · IOS · RUNTIME</text>
+  </g>
+
+  <!-- Project 02 -->
+  <g class="rise a2" transform="translate(0,78)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">02 / TWEAKBASE</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">iOS tweak development framework and base template using Logos.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Streamlined workflow for building MobileSubstrate tweaks.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">LOGOS · THEOS · MOBILESUBSTRATE · IOS</text>
+  </g>
+
+  <!-- Project 03 -->
+  <g class="rise a3" transform="translate(0,156)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">03 / TWEAKCODEMANAGER</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Swift-based management tool for organizing and deploying iOS tweaks.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Code signing, packaging, and distribution pipeline.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">SWIFT · IOS · PACKAGE MANAGEMENT</text>
+  </g>
+
+  <!-- Project 04 -->
+  <g class="rise a4" transform="translate(0,234)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">04 / MUSIC-PLAYER</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">iOS Music Player with Core Data persistence and Qobuz API integration.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Native Swift app with streaming and offline playback support.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">SWIFT · CORE DATA · QOBUZ · IOS</text>
+  </g>
+
+  <!-- Project 05 -->
+  <g class="rise a5" transform="translate(0,312)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">05 / CHATGPTPATCHER</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Runtime patcher for the ChatGPT iOS application.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Demonstrates client-side modification and hook injection techniques.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">RUNTIME HOOKS · IOS · REVERSE ENGINEERING</text>
+  </g>
+
+  <!-- Project 06 -->
+  <g class="rise a6" transform="translate(0,390)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">06 / STOCKFISHIOSLIB</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Stockfish chess engine compiled as an iOS-compatible static library.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">C/C++ cross-compilation for ARM architecture.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">C · C++ · ARM · IOS · STATIC LIB</text>
+  </g>
+
+  <!-- Project 07 -->
+  <g class="rise a7" transform="translate(0,468)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">07 / TVSCRAPER</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">TV playlist scraper and aggregator built with Python.</text>
+    <text x="30" y="68" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Automated content extraction and playlist generation.</text>
+    <text x="30" y="84" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">PYTHON · SCRAPING · AUTOMATION</text>
+  </g>
+
+  <!-- Project 08 -->
+  <g class="rise a8" transform="translate(0,546)">
+    <text x="30" y="30" class="mono" fill="#333333" font-size="14" font-weight="700" letter-spacing="1">08 / POKECENTEROVERLAY</text>
+    <text x="30" y="52" class="mono" fill="#555555" font-size="11" letter-spacing="0.5">Custom overlay interface for Pokémon game enhancement.</text>
+    <text x="30" y="68" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="1">JAVASCRIPT · UI · OVERLAY</text>
+  </g>
+</svg>
