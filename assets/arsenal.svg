@@ -23,61 +23,61 @@
   <line x1="500" y1="110" x2="500" y2="170" stroke="#C0C0C0" stroke-width="1" class="draw a3"/>
   <line x1="580" y1="110" x2="820" y2="170" stroke="#C0C0C0" stroke-width="1" class="draw a3"/>
 
-  <!-- LEFT NODE: Static Analysis -->
+  <!-- LEFT NODE: Traffic & Protocol Analysis -->
   <rect x="60" y="170" width="240" height="44" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a3"/>
-  <text x="180" y="190" class="mono rise a3" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">STATIC ANALYSIS</text>
-  <text x="180" y="205" class="mono rise a3" fill="#888888" font-size="9" text-anchor="middle" letter-spacing="1">disassembly · decompilation</text>
+  <text x="180" y="190" class="mono rise a3" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">TRAFFIC &amp; PROTOCOLS</text>
+  <text x="180" y="205" class="mono rise a3" fill="#888888" font-size="9" text-anchor="middle" letter-spacing="1">interception · protobuf · har</text>
   <!-- sub-nodes -->
   <line x1="120" y1="214" x2="80" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
   <line x1="180" y1="214" x2="180" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
   <line x1="240" y1="214" x2="280" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
-  <rect x="20" y="250" width="120" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="80" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">HOPPER</text>
+  <rect x="20" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="70" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">SURGE / HAR</text>
   <rect x="130" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="180" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">CLASS-DUMP</text>
-  <rect x="240" y="250" width="80" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="280" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">otool</text>
+  <text x="180" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">PROTOBUF</text>
+  <rect x="240" y="250" width="90" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="285" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">CURL / DEVTOOLS</text>
 
-  <!-- CENTER NODE: Dynamic Analysis -->
+  <!-- CENTER NODE: Static & Dynamic RE -->
   <rect x="380" y="170" width="240" height="44" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a3"/>
-  <text x="500" y="190" class="mono rise a3" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">DYNAMIC ANALYSIS</text>
-  <text x="500" y="205" class="mono rise a3" fill="#888888" font-size="9" text-anchor="middle" letter-spacing="1">runtime · instrumentation</text>
+  <text x="500" y="190" class="mono rise a3" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">BINARY &amp; RUNTIME RE</text>
+  <text x="500" y="205" class="mono rise a3" fill="#888888" font-size="9" text-anchor="middle" letter-spacing="1">disassembly · hooks · il2cpp</text>
   <!-- sub-nodes -->
-  <line x1="440" y1="214" x2="400" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
+  <line x1="440" y1="214" x2="380" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
   <line x1="500" y1="214" x2="500" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
-  <line x1="560" y1="214" x2="600" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
-  <rect x="350" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="400" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">FRIDA</text>
-  <rect x="460" y="250" width="80" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="500" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">LLDB</text>
-  <rect x="550" y="250" width="120" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="610" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">CYCRIPT</text>
+  <line x1="560" y1="214" x2="620" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
+  <rect x="330" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="380" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">HOPPER</text>
+  <rect x="445" y="250" width="110" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="500" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">IL2CPP DUMPER</text>
+  <rect x="570" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="620" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">FRIDA / HOOKS</text>
 
-  <!-- RIGHT NODE: Network & API -->
+  <!-- RIGHT NODE: Payload & Automation -->
   <rect x="700" y="170" width="240" height="44" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a3"/>
-  <text x="820" y="190" class="mono rise a3" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">NETWORK &amp; API</text>
-  <text x="820" y="205" class="mono rise a3" fill="#888888" font-size="9" text-anchor="middle" letter-spacing="1">proxy · interception · fuzzing</text>
+  <text x="820" y="190" class="mono rise a3" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.5">PAYLOADS &amp; SCRIPTING</text>
+  <text x="820" y="205" class="mono rise a3" fill="#888888" font-size="9" text-anchor="middle" letter-spacing="1">xss · webview · scanners</text>
   <!-- sub-nodes -->
   <line x1="760" y1="214" x2="730" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
   <line x1="820" y1="214" x2="820" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
   <line x1="880" y1="214" x2="910" y2="250" stroke="#C0C0C0" stroke-width="1" class="draw a4"/>
   <rect x="680" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="730" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">SURGE</text>
-  <rect x="790" y="250" width="60" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="820" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">BURP</text>
-  <rect x="860" y="250" width="100" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
-  <text x="910" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">PYTHON</text>
+  <text x="730" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">PYTHON SCRIPTS</text>
+  <rect x="790" y="250" width="70" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="825" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">JS / SVG</text>
+  <rect x="870" y="250" width="110" height="32" rx="3" fill="none" stroke="#C0C0C0" stroke-width="1" class="rise a4"/>
+  <text x="925" y="270" class="mono rise a4" fill="#555555" font-size="10" text-anchor="middle" letter-spacing="1">DECRYPTED IPAS</text>
 
   <!-- bottom section: Languages -->
   <line x1="30" y1="320" x2="970" y2="320" stroke="#C0C0C0" stroke-width="1" class="draw a5"/>
-  <text x="30" y="350" class="mono rise a5" fill="#888888" font-size="11" letter-spacing="2">LANGUAGES</text>
-  <text x="30" y="375" class="mono rise a5" fill="#555555" font-size="12" letter-spacing="1">Python · Objective-C · Swift · C/C++ · ARM Assembly · JavaScript</text>
+  <text x="30" y="350" class="mono rise a5" fill="#888888" font-size="11" letter-spacing="2">LANGUAGES &amp; ARTIFACTS</text>
+  <text x="30" y="375" class="mono rise a5" fill="#555555" font-size="12" letter-spacing="1">Python · JavaScript · HTML/SVG · C/C++ · ARM Assembly · dump.cs · global-metadata.dat</text>
 
-  <text x="30" y="410" class="mono rise a6" fill="#888888" font-size="11" letter-spacing="2">PLATFORMS</text>
-  <text x="30" y="435" class="mono rise a6" fill="#555555" font-size="12" letter-spacing="1">iOS · macOS · Linux</text>
+  <text x="30" y="410" class="mono rise a6" fill="#888888" font-size="11" letter-spacing="2">DOMAINS &amp; TARGETS</text>
+  <text x="30" y="435" class="mono rise a6" fill="#555555" font-size="12" letter-spacing="1">iOS Applications · Unity / IL2CPP Games · WebViews · Authenticated APIs</text>
 
-  <text x="500" y="410" class="mono rise a6" fill="#888888" font-size="11" letter-spacing="2">SPECIALIZATIONS</text>
-  <text x="500" y="435" class="mono rise a6" fill="#555555" font-size="12" letter-spacing="1">Tweak Development · MobileSubstrate · App Store Publishing</text>
+  <text x="500" y="410" class="mono rise a6" fill="#888888" font-size="11" letter-spacing="2">RESEARCH VECTORS</text>
+  <text x="500" y="435" class="mono rise a6" fill="#555555" font-size="12" letter-spacing="1">DOM Sinks &amp; XSS · Request Rewriting · Signatures/Salts Extraction · Protobuf Schemas</text>
 
   <!-- bottom label -->
   <text x="500" y="470" class="mono rise a6" fill="#AAAAAA" font-size="10" text-anchor="middle" letter-spacing="2">DASHED LINES · DATA IN MOTION</text>
