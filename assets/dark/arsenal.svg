@@ -83,7 +83,7 @@
   <!-- bottom section: Languages -->
   <line x1="30" y1="315" x2="970" y2="315" stroke="#444444" stroke-width="1"/>
   <text x="30" y="340" class="mono" fill="#777777" font-size="10.5" letter-spacing="2">LANGUAGES &amp; ARTIFACTS</text>
-  <text x="30" y="362" class="mono" fill="#AAAAAA" font-size="11" letter-spacing="0.5">Python · JavaScript · HTML/SVG · C/C++ · ARM Assembly · dump.cs · global-metadata.dat</text>
+  <text x="30" y="362" class="mono" fill="#AAAAAA" font-size="11" letter-spacing="0.5">Python · Swift · JavaScript · HTML/SVG · C/C++ · ARM Assembly</text>
 
   <text x="30" y="400" class="mono" fill="#777777" font-size="10.5" letter-spacing="2">DOMAINS &amp; TARGETS</text>
   <text x="30" y="422" class="mono" fill="#AAAAAA" font-size="10" letter-spacing="0.5">iOS Apps · Unity / IL2CPP · WebViews · Authenticated APIs</text>
