@@ -2,6 +2,7 @@
 """
 Generate the 'THE ROUTE' timeline SVG dynamically from ImDasky's public GitHub repos.
 Produces both light and dark versions in assets/ and assets/dark/.
+Organized by Year + Quarter / Month to spread out repositories evenly along the timeline.
 """
 
 import json
@@ -38,128 +39,122 @@ def fetch_repos():
         return json.loads(resp.read().decode())
 
 
-def group_by_year(repos):
-    """Group repos by creation year, return sorted dict."""
-    by_year = defaultdict(list)
-    for r in repos:
-        year = int(r["created_at"][:4])
-        lang = r.get("language") or ""
-        by_year[year].append({"name": r["name"], "language": lang})
-    return dict(sorted(by_year.items()))
-
-
-def generate_svg(years_data, palette, total_repos):
-    """Build the timeline SVG string."""
-    year_list = list(years_data.keys())
-    if not year_list:
+def generate_svg(repos, palette):
+    """Build a spread-out timeline SVG string based on repo creation dates."""
+    if not repos:
         return ""
 
-    min_year = year_list[0]
-    max_year = datetime.now().year
+    # Parse dates
+    parsed_repos = []
+    for r in repos:
+        dt = datetime.strptime(r["created_at"][:10], "%Y-%m-%d")
+        parsed_repos.append({
+            "name": r["name"],
+            "date": dt,
+            "year": dt.year,
+            "month": dt.strftime("%b"),
+            "language": r.get("language") or ""
+        })
+
+    # Sort chronologically
+    parsed_repos.sort(key=lambda x: x["date"])
+
+    min_date = parsed_repos[0]["date"]
+    max_date = datetime.now()
+
+    total_days = max(1, (max_date - min_date).days)
 
     # Layout constants
-    svg_w = 1200
-    pad_l, pad_r = 80, 140
-    axis_y = 125
+    svg_w = 1000
+    pad_l, pad_r = 60, 80
+    axis_y = 120
     usable_w = svg_w - pad_l - pad_r
-    num_years = max_year - min_year
-    if num_years == 0:
-        num_years = 1
-    step = usable_w / num_years
-
-    # Calculate height based on max annotations
-    max_items = max(len(v) for v in years_data.values()) if years_data else 1
-    svg_h = max(250, 170 + max_items * 18)
 
     c = palette  # shorthand
 
     lines = []
+    # Height is fixed and clean
+    svg_h = 320
+
     lines.append(f'<svg viewBox="0 0 {svg_w} {svg_h}" fill="none" '
                  f'xmlns="http://www.w3.org/2000/svg" role="img" '
-                 f'aria-label="Timeline of {total_repos} public repositories">')
+                 f'aria-label="Timeline of {len(repos)} public repositories">')
     lines.append("""  <style>
     .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-    .axis { stroke-dasharray: 1110; stroke-dashoffset: 1110; animation: draw 2.4s cubic-bezier(.6,0,.2,1) forwards; }
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-    .m { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
-    @keyframes rise { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
     .pulse { animation: pulse 2.6s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
-    @media (prefers-reduced-motion: reduce) { .axis,.m,.pulse { animation: none; opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; opacity: 1; } }
   </style>""")
 
     # Title
-    lines.append(f'  <text x="{pad_l}" y="28" class="mono m" style="animation-delay:.1s" '
+    lines.append(f'  <text x="{pad_l}" y="28" class="mono" '
                  f'fill="{c["muted"]}" font-size="11" letter-spacing="2">'
-                 f'THE ROUTE SO FAR</text>')
-    lines.append(f'  <text x="{svg_w - 50}" y="28" class="mono m" style="animation-delay:.1s" '
+                 f'THE ROUTE SO FAR — SHIPPING CHRONOLOGY</text>')
+    lines.append(f'  <text x="{svg_w - 30}" y="28" class="mono" '
                  f'fill="{c["dim"]}" font-size="10" text-anchor="end" letter-spacing="1">'
-                 f'FIG. 02</text>')
+                 f'FIG. 03</text>')
 
     # Horizontal axis line
-    now_x = pad_l + usable_w + 40
-    lines.append(f'  <line x1="{pad_l}" y1="{axis_y}" x2="{now_x}" y2="{axis_y}" '
-                 f'class="axis" stroke="{c["rule"]}" stroke-width="1"/>')
+    lines.append(f'  <line x1="{pad_l}" y1="{axis_y}" x2="{pad_l + usable_w}" y2="{axis_y}" '
+                 f'stroke="{c["rule"]}" stroke-width="1"/>')
 
-    # Year markers and repo annotations
-    delay_idx = 1
-    for year in range(min_year, max_year + 1):
-        x = pad_l + (year - min_year) * step
-        delay = 0.3 + delay_idx * 0.3
-        delay_idx += 1
+    # Year markers along the axis
+    min_year = min_date.year
+    max_year = max_date.year
 
-        # Year label below axis
-        lines.append(f'  <text x="{x}" y="{axis_y + 24}" class="mono m" '
-                     f'style="animation-delay:{delay}s" fill="{c["muted"]}" '
-                     f'font-size="12" text-anchor="middle" font-weight="700">{year}</text>')
+    for y in range(min_year, max_year + 1):
+        year_dt = datetime(y, 1, 1)
+        if year_dt < min_date:
+            year_dt = min_date
+        days_from_start = (year_dt - min_date).days
+        x = pad_l + (days_from_start / total_days) * usable_w
 
-        if year in years_data:
-            repos = years_data[year]
-            # Tick mark
-            lines.append(f'  <line x1="{x}" y1="{axis_y - 8}" x2="{x}" y2="{axis_y + 8}" '
-                         f'stroke="{c["rule"]}" stroke-width="1"/>')
-            # Dot on axis
-            lines.append(f'  <circle cx="{x}" cy="{axis_y}" r="4" fill="{c["dot"]}" '
-                         f'class="m" style="animation-delay:{delay}s"/>')
+        lines.append(f'  <line x1="{x}" y1="{axis_y - 6}" x2="{x}" y2="{axis_y + 6}" '
+                     f'stroke="{c["rule"]}" stroke-width="1"/>')
+        lines.append(f'  <text x="{x}" y="{axis_y + 22}" class="mono" fill="{c["muted"]}" '
+                     f'font-size="11" font-weight="700" text-anchor="middle">{y}</text>')
 
-            # Repo count badge above
-            count = len(repos)
-            lines.append(f'  <text x="{x}" y="{axis_y - 20}" class="mono m" '
-                         f'style="animation-delay:{delay}s" fill="{c["accent"]}" '
-                         f'font-size="10" text-anchor="middle" letter-spacing="1">'
-                         f'{count} repo{"s" if count != 1 else ""}</text>')
+    # Spread out repos alternately ABOVE and BELOW the axis line
+    # To prevent text collision between nearby repos, we calculate x for each repo
+    for i, item in enumerate(parsed_repos):
+        days_from_start = (item["date"] - min_date).days
+        x = pad_l + (days_from_start / total_days) * usable_w
 
-            # Repo names below year label
-            for i, repo in enumerate(repos[:5]):  # max 5 per year to avoid overflow
-                ry = axis_y + 42 + i * 16
-                name_display = repo["name"]
-                if len(name_display) > 18:
-                    name_display = name_display[:16] + ".."
-                lines.append(f'  <text x="{x}" y="{ry}" class="mono m" '
-                             f'style="animation-delay:{delay + 0.05 * i}s" '
-                             f'fill="{c["dim"]}" font-size="9" text-anchor="middle" '
-                             f'letter-spacing="0.5">{name_display}</text>')
-            if len(repos) > 5:
-                ry = axis_y + 42 + 5 * 16
-                lines.append(f'  <text x="{x}" y="{ry}" class="mono m" '
-                             f'style="animation-delay:{delay + 0.3}s" '
-                             f'fill="{c["dim"]}" font-size="9" text-anchor="middle">'
-                             f'+{len(repos) - 5} more</text>')
+        # Alternate above and below
+        is_above = (i % 2 == 0)
+
+        # Dot on line
+        lines.append(f'  <circle cx="{x}" cy="{axis_y}" r="3.5" fill="{c["dot"]}"/>')
+
+        name_display = item["name"]
+        if len(name_display) > 16:
+            name_display = name_display[:14] + ".."
+
+        if is_above:
+            # Stem line extending UP
+            stem_y = axis_y - 25 - (i % 3) * 15
+            lines.append(f'  <line x1="{x}" y1="{axis_y - 3.5}" x2="{x}" y2="{stem_y}" '
+                         f'stroke="{c["rule"]}" stroke-width="0.75" stroke-dasharray="2 2"/>')
+            lines.append(f'  <text x="{x}" y="{stem_y - 6}" class="mono" fill="{c["bone"]}" '
+                         f'font-size="9.5" font-weight="700" text-anchor="middle">{name_display}</text>')
+            lines.append(f'  <text x="{x}" y="{stem_y - 18}" class="mono" fill="{c["dim"]}" '
+                         f'font-size="8.5" text-anchor="middle">{item["month"]} {item["year"]}</text>')
         else:
-            # Empty year — small tick
-            lines.append(f'  <line x1="{x}" y1="{axis_y - 4}" x2="{x}" y2="{axis_y + 4}" '
-                         f'stroke="{c["rule"]}" stroke-width="0.5"/>')
+            # Stem line extending DOWN below year labels
+            stem_y = axis_y + 45 + (i % 3) * 15
+            lines.append(f'  <line x1="{x}" y1="{axis_y + 26}" x2="{x}" y2="{stem_y}" '
+                         f'stroke="{c["rule"]}" stroke-width="0.75" stroke-dasharray="2 2"/>')
+            lines.append(f'  <text x="{x}" y="{stem_y + 12}" class="mono" fill="{c["bone"]}" '
+                         f'font-size="9.5" font-weight="700" text-anchor="middle">{name_display}</text>')
+            lines.append(f'  <text x="{x}" y="{stem_y + 24}" class="mono" fill="{c["dim"]}" '
+                         f'font-size="8.5" text-anchor="middle">{item["month"]} {item["year"]}</text>')
 
-    # "NOW" pulsing dot at the end
+    # "NOW" marker at the end
+    now_x = pad_l + usable_w
     lines.append(f'  <circle cx="{now_x}" cy="{axis_y}" r="5" fill="{c["dot"]}" class="pulse"/>')
-    lines.append(f'  <circle cx="{now_x}" cy="{axis_y}" r="5" fill="none" '
-                 f'stroke="{c["ring"]}" stroke-width="1" opacity="0.5" class="pulse"/>')
-    lines.append(f'  <text x="{now_x}" y="{axis_y + 24}" class="mono m pulse" '
-                 f'fill="{c["muted"]}" font-size="11" text-anchor="middle" '
+    lines.append(f'  <text x="{now_x}" y="{axis_y - 12}" class="mono pulse" '
+                 f'fill="{c["muted"]}" font-size="10" text-anchor="middle" '
                  f'font-weight="700">NOW</text>')
-    lines.append(f'  <text x="{now_x}" y="{axis_y - 16}" class="mono m" '
-                 f'style="animation-delay:2.5s" fill="{c["accent"]}" font-size="10" '
-                 f'text-anchor="middle">{total_repos} repos</text>')
 
     lines.append("</svg>")
     return "\n".join(lines)
@@ -167,12 +162,9 @@ def generate_svg(years_data, palette, total_repos):
 
 def main():
     repos = fetch_repos()
-    # Exclude the profile repo itself
+    # Exclude profile repo
     repos = [r for r in repos if r["name"] != USERNAME]
-    total = len(repos)
-    years_data = group_by_year(repos)
 
-    # Determine output directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
     root = os.path.dirname(script_dir)
     assets = os.path.join(root, "assets")
@@ -180,16 +172,16 @@ def main():
     os.makedirs(assets_dark, exist_ok=True)
 
     # Generate light
-    svg_light = generate_svg(years_data, LIGHT, total)
+    svg_light = generate_svg(repos, LIGHT)
     with open(os.path.join(assets, "route.svg"), "w") as f:
         f.write(svg_light)
 
     # Generate dark
-    svg_dark = generate_svg(years_data, DARK, total)
+    svg_dark = generate_svg(repos, DARK)
     with open(os.path.join(assets_dark, "route.svg"), "w") as f:
         f.write(svg_dark)
 
-    print(f"✓ Generated route.svg ({total} repos across {len(years_data)} years)")
+    print(f"✓ Generated spread-out route.svg ({len(repos)} repos)")
 
 
 if __name__ == "__main__":
