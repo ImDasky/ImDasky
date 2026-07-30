@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ben Shi — Security Researcher &amp; iOS Reverse Engineer">
+<svg viewBox="0 0 1000 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ben Shi — Security Researcher &amp; Reverse Engineer">
   <style>
     .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
     .draw { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
@@ -7,10 +7,20 @@
     @keyframes rise { from { opacity:0;transform:translateY(12px); } to { opacity:1;transform:translateY(0); } }
     .fade { opacity: 0; animation: fade .7s ease forwards; }
     @keyframes fade { to { opacity: 1; } }
-    .a1{animation-delay:.2s} .a2{animation-delay:.5s} .a3{animation-delay:.9s} .a4{animation-delay:1.2s} .a5{animation-delay:1.4s} .a6{animation-delay:1.7s}
-    .rot { opacity:0; animation: rot 12s linear infinite; }
-    .r1{animation-delay:1.7s} .r2{animation-delay:4.7s} .r3{animation-delay:7.7s}
-    @keyframes rot { 0%{opacity:0} 2%{opacity:1} 30%{opacity:1} 32%{opacity:0} 100%{opacity:0} }
+    .a1{animation-delay:.2s} .a2{animation-delay:.5s} .a3{animation-delay:.9s} .a4{animation-delay:1.2s} .a5{animation-delay:1.4s}
+    
+    /* Clean Rotating Text Animation with Discrete Step Transitions */
+    .rot { opacity: 0; animation: rot 12s infinite; }
+    .r1 { animation-delay: 0s; }
+    .r2 { animation-delay: 4s; }
+    .r3 { animation-delay: 8s; }
+    @keyframes rot {
+      0% { opacity: 0; transform: translateY(4px); }
+      5% { opacity: 1; transform: translateY(0); }
+      30% { opacity: 1; transform: translateY(0); }
+      35% { opacity: 0; transform: translateY(-4px); }
+      100% { opacity: 0; }
+    }
     @media (prefers-reduced-motion: reduce) { .draw,.rise,.fade,.rot { animation: none; opacity: 1; } }
   </style>
 
@@ -18,31 +28,31 @@
   <text x="30" y="38" class="mono fade a1" fill="#888888" font-size="11" letter-spacing="2">PORTFOLIO · INDEX Nº 001</text>
 
   <!-- horizontal rule -->
-  <line x1="30" y1="56" x2="970" y2="56" class="draw" stroke="#C0C0C0" stroke-width="1"/>
+  <line x1="30" y1="54" x2="970" y2="54" class="draw" stroke="#C0C0C0" stroke-width="1"/>
 
   <!-- main name -->
-  <text x="30" y="150" class="mono rise a2" fill="#333333" font-size="72" font-weight="700" letter-spacing="-1">Ben Shi</text>
+  <text x="30" y="130" class="mono rise a2" fill="#333333" font-size="64" font-weight="700" letter-spacing="-1">Ben Shi</text>
 
   <!-- subtitle -->
-  <text x="30" y="190" class="mono rise a3" fill="#555555" font-size="18" letter-spacing="1">Security Researcher &amp; iOS Reverse Engineer</text>
+  <text x="30" y="165" class="mono rise a3" fill="#555555" font-size="16" letter-spacing="1">Mobile Security Researcher &amp; Reverse Engineer</text>
 
   <!-- focus tags -->
-  <text x="30" y="235" class="mono fade a4" fill="#888888" font-size="11" letter-spacing="2">FOCUS · iOS SECURITY · REVERSE ENGINEERING · API EXPLOITATION</text>
-  <text x="30" y="258" class="mono fade a4" fill="#AAAAAA" font-size="11" letter-spacing="2">OPEN TO FREELANCE · COLLABORATION · RESPONSIBLE DISCLOSURE</text>
+  <text x="30" y="205" class="mono fade a4" fill="#888888" font-size="11" letter-spacing="2">FOCUS · iOS RE · NETWORK TRAFFIC · IL2CPP · WEBVIEW EXPLOITATION</text>
+  <text x="30" y="226" class="mono fade a4" fill="#AAAAAA" font-size="11" letter-spacing="2">OPEN TO FREELANCE · COLLABORATION · RESPONSIBLE DISCLOSURE</text>
 
-  <!-- column headers -->
-  <line x1="30" y1="285" x2="970" y2="285" class="draw" stroke="#C0C0C0" stroke-width="1"/>
-  <text x="30" y="310" class="mono fade a5" fill="#888888" font-size="11" letter-spacing="3">PYTHON &amp; SWIFT</text>
-  <text x="320" y="310" class="mono fade a5" fill="#888888" font-size="11" letter-spacing="3">IOS &amp; API SECURITY</text>
-  <text x="640" y="310" class="mono fade a5" fill="#888888" font-size="11" letter-spacing="3">TOOLS &amp; TECHNIQUES</text>
+  <!-- column headers rule -->
+  <line x1="30" y1="250" x2="970" y2="250" class="draw" stroke="#C0C0C0" stroke-width="1"/>
+  <text x="30" y="274" class="mono fade a5" fill="#888888" font-size="11" letter-spacing="3">REVERSE ENGINEERING</text>
+  <text x="360" y="274" class="mono fade a5" fill="#888888" font-size="11" letter-spacing="3">TRAFFIC &amp; PROTOCOLS</text>
+  <text x="700" y="274" class="mono fade a5" fill="#888888" font-size="11" letter-spacing="3">AUTOMATION &amp; PAYLOADS</text>
 
   <!-- rotating status line -->
-  <g class="mono" font-size="12" letter-spacing="1">
-    <text x="500" y="365" text-anchor="middle" class="rot r1" fill="#AAAAAA">HOPPER · FRIDA · CLASS-DUMP · LLDB</text>
-    <text x="500" y="365" text-anchor="middle" class="rot r2" fill="#AAAAAA">SURGE · BURP SUITE · CUSTOM PYTHON TOOLING</text>
-    <text x="500" y="365" text-anchor="middle" class="rot r3" fill="#AAAAAA">BINARY ANALYSIS · RUNTIME INSTRUMENTATION · API EXPLOITATION</text>
+  <g class="mono" font-size="11" letter-spacing="1.5">
+    <text x="500" y="325" text-anchor="middle" class="rot r1" fill="#666666">SURGE · HAR CAPTURES · PROTOBUF REWRITING · API DISCOVERY</text>
+    <text x="500" y="325" text-anchor="middle" class="rot r2" fill="#666666">HOPPER DISASSEMBLER · FRIDA HOOKS · IL2CPP DUMPER · GHIDRA</text>
+    <text x="500" y="325" text-anchor="middle" class="rot r3" fill="#666666">PYTHON AUTOMATION · DOM SINKS · JS &amp; SVG PAYLOADS · DECRYPTED IPAS</text>
   </g>
 
   <!-- bottom rule -->
-  <line x1="30" y1="390" x2="970" y2="390" class="draw" stroke="#C0C0C0" stroke-width="1"/>
+  <line x1="30" y1="345" x2="970" y2="345" class="draw" stroke="#C0C0C0" stroke-width="1"/>
 </svg>
