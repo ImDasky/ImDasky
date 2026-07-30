@@ -1,41 +1,37 @@
-<svg viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stack — tools, reverse engineering, payloads, methodology">
+<svg viewBox="0 0 1000 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stack — tools, reverse engineering, payloads, methodology">
   <style>
     .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-    .rise { opacity: 0; animation: rise .6s cubic-bezier(.2,.7,.2,1) forwards; }
-    @keyframes rise { from { opacity:0;transform:translateY(6px); } to { opacity:1;transform:translateY(0); } }
-    .a1{animation-delay:.1s} .a2{animation-delay:.2s} .a3{animation-delay:.3s} .a4{animation-delay:.4s} .a5{animation-delay:.5s} .a6{animation-delay:.6s} .a7{animation-delay:.7s}
-    @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; } }
   </style>
 
   <!-- Row 1: Traffic Analysis & Proxying -->
-  <text x="30" y="24" class="mono rise a1" fill="#777777" font-size="10" letter-spacing="2">TRAFFIC ANALYSIS &amp; PROXYING</text>
-  <text x="30" y="44" class="mono rise a1" fill="#DDDDDD" font-size="12" letter-spacing="1">Surge (iOS / HAR) · Protobuf Inspection · Endpoint Discovery · Request Rewriting · curl</text>
+  <text x="30" y="24" class="mono" fill="#777777" font-size="10" letter-spacing="2">TRAFFIC ANALYSIS &amp; PROXYING</text>
+  <text x="30" y="44" class="mono" fill="#DDDDDD" font-size="11.5" letter-spacing="0.5">Surge (iOS / HAR) · Protobuf Inspection · Endpoint Discovery · Request Rewriting · curl</text>
 
   <!-- Row 2: Static & Dynamic RE -->
-  <text x="30" y="80" class="mono rise a2" fill="#777777" font-size="10" letter-spacing="2">BINARY &amp; RUNTIME REVERSE ENGINEERING</text>
-  <text x="30" y="100" class="mono rise a2" fill="#DDDDDD" font-size="12" letter-spacing="1">Hopper Disassembler · Frida (NSURLRequest/HMAC Hooking) · class-dump · LLDB</text>
+  <text x="30" y="78" class="mono" fill="#777777" font-size="10" letter-spacing="2">BINARY &amp; RUNTIME REVERSE ENGINEERING</text>
+  <text x="30" y="98" class="mono" fill="#DDDDDD" font-size="11.5" letter-spacing="0.5">Hopper Disassembler · Frida (NSURLRequest/HMAC Hooking) · class-dump · LLDB</text>
 
   <!-- Row 3: Unity & IL2CPP -->
-  <text x="30" y="136" class="mono rise a3" fill="#777777" font-size="10" letter-spacing="2">UNITY / IL2CPP RESEARCH</text>
-  <text x="30" y="156" class="mono rise a3" fill="#DDDDDD" font-size="12" letter-spacing="1">Il2CppDumper · Il2CppInspector · dump.cs · script.json · global-metadata.dat · Ghidra</text>
+  <text x="30" y="132" class="mono" fill="#777777" font-size="10" letter-spacing="2">UNITY / IL2CPP RESEARCH</text>
+  <text x="30" y="152" class="mono" fill="#DDDDDD" font-size="11.5" letter-spacing="0.5">Il2CppDumper · Il2CppInspector · dump.cs · script.json · global-metadata.dat · Ghidra</text>
 
   <!-- Row 4: Payloads & Scripting -->
-  <text x="30" y="192" class="mono rise a4" fill="#777777" font-size="10" letter-spacing="2">PAYLOADS &amp; AUTOMATION</text>
-  <text x="30" y="212" class="mono rise a4" fill="#DDDDDD" font-size="12" letter-spacing="1">Python Scanners · JS/HTML/SVG Payloads · DOM Sinks · JS Bundle Scanning · Decrypted IPAs</text>
+  <text x="30" y="186" class="mono" fill="#777777" font-size="10" letter-spacing="2">PAYLOADS &amp; AUTOMATION</text>
+  <text x="30" y="206" class="mono" fill="#DDDDDD" font-size="11.5" letter-spacing="0.5">Python Scanners · JS/HTML/SVG Payloads · DOM Sinks · JS Bundle Scanning · Decrypted IPAs</text>
 
   <!-- Vertical separator -->
-  <line x1="700" y1="14" x2="700" y2="220" stroke="#444444" stroke-width="0.5" class="rise a5"/>
+  <line x1="680" y1="14" x2="680" y2="210" stroke="#444444" stroke-width="0.5"/>
 
   <!-- Right column: Targets & Artifacts -->
-  <text x="730" y="24" class="mono rise a5" fill="#777777" font-size="10" letter-spacing="2">TARGET SYSTEMS</text>
-  <text x="730" y="44" class="mono rise a5" fill="#DDDDDD" font-size="12" letter-spacing="1">iOS Executables · WebViews</text>
-  <text x="730" y="60" class="mono rise a5" fill="#DDDDDD" font-size="12" letter-spacing="1">Unity Game Engines</text>
+  <text x="705" y="24" class="mono" fill="#777777" font-size="10" letter-spacing="2">TARGET SYSTEMS</text>
+  <text x="705" y="44" class="mono" fill="#DDDDDD" font-size="11" letter-spacing="0.5">iOS Executables · WebViews</text>
+  <text x="705" y="60" class="mono" fill="#DDDDDD" font-size="11" letter-spacing="0.5">Unity Game Engines</text>
 
-  <text x="730" y="96" class="mono rise a6" fill="#777777" font-size="10" letter-spacing="2">FILESYSTEM &amp; TOOLS</text>
-  <text x="730" y="116" class="mono rise a6" fill="#DDDDDD" font-size="12" letter-spacing="1">Filza · eeveedecrypter</text>
-  <text x="730" y="134" class="mono rise a6" fill="#DDDDDD" font-size="12" letter-spacing="1">Browser DevTools</text>
+  <text x="705" y="94" class="mono" fill="#777777" font-size="10" letter-spacing="2">FILESYSTEM &amp; TOOLS</text>
+  <text x="705" y="114" class="mono" fill="#DDDDDD" font-size="11" letter-spacing="0.5">Filza · eeveedecrypter</text>
+  <text x="705" y="130" class="mono" fill="#DDDDDD" font-size="11" letter-spacing="0.5">Browser DevTools</text>
 
-  <text x="730" y="170" class="mono rise a7" fill="#777777" font-size="10" letter-spacing="2">RESEARCH GOALS</text>
-  <text x="730" y="190" class="mono rise a7" fill="#DDDDDD" font-size="12" letter-spacing="1">Signature Extraction</text>
-  <text x="730" y="208" class="mono rise a7" fill="#DDDDDD" font-size="12" letter-spacing="1">Auth &amp; Privilege Bypasses</text>
+  <text x="705" y="164" class="mono" fill="#777777" font-size="10" letter-spacing="2">RESEARCH GOALS</text>
+  <text x="705" y="184" class="mono" fill="#DDDDDD" font-size="11" letter-spacing="0.5">Signature Extraction</text>
+  <text x="705" y="200" class="mono" fill="#DDDDDD" font-size="11" letter-spacing="0.5">Auth &amp; Privilege Bypasses</text>
 </svg>
