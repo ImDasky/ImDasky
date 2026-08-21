@@ -10,52 +10,52 @@
   <line x1="60" y1="120" x2="920" y2="120" stroke="#444444" stroke-width="1"/>
   <line x1="60.0" y1="114" x2="60.0" y2="126" stroke="#444444" stroke-width="1"/>
   <text x="60.0" y="142" class="mono" fill="#777777" font-size="11" font-weight="700" text-anchor="middle">2025</text>
-  <line x1="495.5128205128205" y1="114" x2="495.5128205128205" y2="126" stroke="#444444" stroke-width="1"/>
-  <text x="495.5128205128205" y="142" class="mono" fill="#777777" font-size="11" font-weight="700" text-anchor="middle">2026</text>
+  <line x1="494.5842217484008" y1="114" x2="494.5842217484008" y2="126" stroke="#444444" stroke-width="1"/>
+  <text x="494.5842217484008" y="142" class="mono" fill="#777777" font-size="11" font-weight="700" text-anchor="middle">2026</text>
   <circle cx="60.0" cy="120" r="3.5" fill="#AAAAAA"/>
   <line x1="60.0" y1="116.5" x2="60.0" y2="95" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
   <text x="60.0" y="89" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">StockfishiOSLib</text>
   <text x="60.0" y="77" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">May 2025</text>
-  <circle cx="302.56410256410254" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="302.56410256410254" y1="146" x2="302.56410256410254" y2="180" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="302.56410256410254" y="192" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">Music-Player</text>
-  <text x="302.56410256410254" y="204" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Sep 2025</text>
-  <circle cx="339.3162393162393" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="339.3162393162393" y1="116.5" x2="339.3162393162393" y2="65" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="339.3162393162393" y="59" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">PokecenterOver..</text>
-  <text x="339.3162393162393" y="47" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Oct 2025</text>
-  <circle cx="363.20512820512823" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="363.20512820512823" y1="146" x2="363.20512820512823" y2="165" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="363.20512820512823" y="177" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">ChatGPTpatcher</text>
-  <text x="363.20512820512823" y="189" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Oct 2025</text>
-  <circle cx="366.8803418803419" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="366.8803418803419" y1="116.5" x2="366.8803418803419" y2="80" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="366.8803418803419" y="74" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">TweakCodeManager</text>
-  <text x="366.8803418803419" y="62" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Oct 2025</text>
-  <circle cx="431.19658119658123" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="431.19658119658123" y1="146" x2="431.19658119658123" y2="195" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="431.19658119658123" y="207" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">FLEX-Jailed</text>
-  <text x="431.19658119658123" y="219" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Nov 2025</text>
-  <circle cx="453.2478632478632" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="453.2478632478632" y1="116.5" x2="453.2478632478632" y2="95" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="453.2478632478632" y="89" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">myecom-store</text>
-  <text x="453.2478632478632" y="77" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Dec 2025</text>
-  <circle cx="782.1794871794872" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="782.1794871794872" y1="146" x2="782.1794871794872" y2="180" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="782.1794871794872" y="192" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">inkshelf</text>
-  <text x="782.1794871794872" y="204" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Jun 2026</text>
-  <circle cx="848.3333333333333" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="848.3333333333333" y1="116.5" x2="848.3333333333333" y2="65" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="848.3333333333333" y="59" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">TvScraper</text>
-  <text x="848.3333333333333" y="47" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Jul 2026</text>
-  <circle cx="855.6837606837607" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="855.6837606837607" y1="146" x2="855.6837606837607" y2="165" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="855.6837606837607" y="177" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">TweakBase</text>
-  <text x="855.6837606837607" y="189" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Jul 2026</text>
-  <circle cx="908.974358974359" cy="120" r="3.5" fill="#AAAAAA"/>
-  <line x1="908.974358974359" y1="116.5" x2="908.974358974359" y2="80" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
-  <text x="908.974358974359" y="74" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">filzaslop</text>
-  <text x="908.974358974359" y="62" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Aug 2026</text>
+  <circle cx="302.046908315565" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="302.046908315565" y1="146" x2="302.046908315565" y2="180" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="302.046908315565" y="192" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">Music-Player</text>
+  <text x="302.046908315565" y="204" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Sep 2025</text>
+  <circle cx="338.7206823027719" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="338.7206823027719" y1="116.5" x2="338.7206823027719" y2="65" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="338.7206823027719" y="59" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">PokecenterOver..</text>
+  <text x="338.7206823027719" y="47" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Oct 2025</text>
+  <circle cx="362.5586353944563" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="362.5586353944563" y1="146" x2="362.5586353944563" y2="165" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="362.5586353944563" y="177" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">ChatGPTpatcher</text>
+  <text x="362.5586353944563" y="189" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Oct 2025</text>
+  <circle cx="366.22601279317695" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="366.22601279317695" y1="116.5" x2="366.22601279317695" y2="80" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="366.22601279317695" y="74" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">TweakCodeManager</text>
+  <text x="366.22601279317695" y="62" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Oct 2025</text>
+  <circle cx="430.4051172707889" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="430.4051172707889" y1="146" x2="430.4051172707889" y2="195" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="430.4051172707889" y="207" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">FLEX-Jailed</text>
+  <text x="430.4051172707889" y="219" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Nov 2025</text>
+  <circle cx="452.40938166311304" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="452.40938166311304" y1="116.5" x2="452.40938166311304" y2="95" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="452.40938166311304" y="89" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">myecom-store</text>
+  <text x="452.40938166311304" y="77" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Dec 2025</text>
+  <circle cx="780.6396588486141" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="780.6396588486141" y1="146" x2="780.6396588486141" y2="180" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="780.6396588486141" y="192" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">inkshelf</text>
+  <text x="780.6396588486141" y="204" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Jun 2026</text>
+  <circle cx="846.6524520255863" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="846.6524520255863" y1="116.5" x2="846.6524520255863" y2="65" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="846.6524520255863" y="59" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">TvScraper</text>
+  <text x="846.6524520255863" y="47" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Jul 2026</text>
+  <circle cx="853.9872068230277" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="853.9872068230277" y1="146" x2="853.9872068230277" y2="165" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="853.9872068230277" y="177" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">TweakBase</text>
+  <text x="853.9872068230277" y="189" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Jul 2026</text>
+  <circle cx="907.1641791044776" cy="120" r="3.5" fill="#AAAAAA"/>
+  <line x1="907.1641791044776" y1="116.5" x2="907.1641791044776" y2="80" stroke="#444444" stroke-width="0.75" stroke-dasharray="2 2"/>
+  <text x="907.1641791044776" y="74" class="mono" fill="#DDDDDD" font-size="9.5" font-weight="700" text-anchor="middle">filzaslop</text>
+  <text x="907.1641791044776" y="62" class="mono" fill="#666666" font-size="8.5" text-anchor="middle">Aug 2026</text>
   <circle cx="920" cy="120" r="5" fill="#AAAAAA" class="pulse"/>
   <text x="920" y="108" class="mono pulse" fill="#777777" font-size="10" text-anchor="middle" font-weight="700">NOW</text>
 </svg>
